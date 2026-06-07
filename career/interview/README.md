@@ -11,6 +11,7 @@
 | 03 | [数据结构与算法](guides/03-data-structures-and-algorithms.md) | 已发布 | 常见数据结构、复杂度、排序查找、刷题策略与现场编程 |
 | 04 | [系统设计与工程实践](guides/04-system-design-and-engineering.md) | 已发布 | 系统设计方法与典型场景、现代后端栈、分布式、云原生 |
 | 05 | [AI 辅助编程与应用](guides/05-ai-assisted-development.md) | 已发布 | IDE Agent 工作流、LLM 应用基础、AI 时代面试策略 |
+| 06 | [经典 100 题面试宝典](guides/06-classic-100-questions.md) | 已发布 | 100 道经典技术面 Q&A（Java/算法/SQL/网络/框架 + 历史→现代） |
 
 ---
 
@@ -29,16 +30,16 @@
 
 | 小节 | 2020s 常考重点 | 仓库双链 |
 |------|----------------|----------|
-| 操作系统 | 进程 vs 线程、虚拟内存、死锁 | [engineering/02-linux-and-shell/](../../engineering/02-linux-and-shell/) |
-| 计算机网络 | TCP/HTTP、TLS、DNS、CDN | — |
-| 数据库与存储 | 索引、事务、SQL 思路、Redis | [fundamentals/04-data-structures/](../../fundamentals/04-data-structures/) |
+| 操作系统 | 进程 vs 线程、虚拟内存、死锁 | [fundamentals/03-operating-systems/](../../fundamentals/03-operating-systems/) · [engineering/02-linux-and-shell/](../../engineering/02-linux-and-shell/) |
+| 计算机网络 | TCP/HTTP、TLS、DNS、CDN | [fundamentals/04-networking/](../../fundamentals/04-networking/) |
+| 数据库与存储 | 索引、事务、SQL 思路、Redis | [fundamentals/05-databases/](../../fundamentals/05-databases/) |
 
 ### 03 数据结构与算法
 
 | 小节 | 面试要点 | 仓库双链 |
 |------|----------|----------|
-| 数据结构选型 | 数组、链表、栈/队列、树、哈希 | [fundamentals/04-data-structures/](../../fundamentals/04-data-structures/) |
-| 排序与复杂度 | 快排、归并、大 O | [fundamentals/05-algorithms/](../../fundamentals/05-algorithms/) |
+| 数据结构选型 | 数组、链表、栈/队列、树、哈希 | [fundamentals/01-data-structures/](../../fundamentals/01-data-structures/) |
+| 排序与复杂度 | 快排、归并、大 O | [fundamentals/01-data-structures/guides/05-sorting-algorithms.md](../../fundamentals/01-data-structures/guides/05-sorting-algorithms.md) |
 | 经典案例 | 栈序列、TopK、Singleton、UTF-8 截取 | — |
 | 现场编程 | 刷题节奏、沟通、边界测试 | — |
 
@@ -61,6 +62,16 @@
 
 > 原则：AI 是杠杆，不是替身。
 
+### 06 经典 100 题面试宝典
+
+| 小节 | 要点 |
+|------|------|
+| Java / OOP | Q01–Q22：语法、String、多态、抽象类与接口 |
+| 并发 / JVM | Q23–Q34：线程、锁、堆栈、GC、类加载 |
+| 集合 / 算法 | Q35–Q57：Collection、IO、Singleton、排序、TopK |
+| 数据库 / 网络 | Q58–Q84：SQL、索引、事务、HTTP/TCP、JWT |
+| 框架 / 历史 | Q85–Q100：设计模式、Spring、Struts/EJB 现代对照 |
+
 ---
 
 ## 按岗位裁剪
@@ -73,6 +84,7 @@
 | AI 应用 / LLM 工程 | 03、04、05 加重 | 04 K8s 深度（视 JD） |
 | 嵌入式 / C++ | 02、03 + [languages/](../../languages/) | 04 按 JD |
 | 校招 / 实习 | 01～03 为主，04 了解概念 | 04 系统设计场景 |
+| 八股速查 | **06 经典 100 题** + 02～03 | 06 第八章历史题按需 |
 
 ---
 
@@ -80,6 +92,7 @@
 
 | 文档 | 说明 |
 |------|------|
+| [06-classic-100-questions.md](guides/06-classic-100-questions.md) | **经典 100 题**完整 Q&A（速查主入口） |
 | [interview-checklist.md](references/interview-checklist.md) | 面试前 / 中 / 后检查清单 |
 | [common-questions-index.md](references/common-questions-index.md) | 高频问题索引 |
 | [modern-stack-glossary.md](references/modern-stack-glossary.md) | 现代栈术语速查 |
@@ -91,8 +104,10 @@
 
 | 方向 | 入口 |
 |------|------|
-| 数据结构 | [fundamentals/04-data-structures/](../../fundamentals/04-data-structures/) |
-| 算法 | [fundamentals/05-algorithms/](../../fundamentals/05-algorithms/) |
+| 数据结构 | [fundamentals/01-data-structures/](../../fundamentals/01-data-structures/) |
+| 操作系统 | [fundamentals/03-operating-systems/](../../fundamentals/03-operating-systems/) |
+| 计算机网络 | [fundamentals/04-networking/](../../fundamentals/04-networking/) |
+| 数据库 | [fundamentals/05-databases/](../../fundamentals/05-databases/) |
 | 工程实践 | [engineering/](../../engineering/) |
 | 语言教程 | [languages/](../../languages/) |
 

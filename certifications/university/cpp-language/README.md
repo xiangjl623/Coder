@@ -47,8 +47,8 @@
 ## 相关基础
 
 - [C 语言期末专题](../c-language/)
-- [数据结构（STL 实现参考）](../../../fundamentals/04-data-structures/)
-- [算法入门](../../../fundamentals/05-algorithms/)
+- [数据结构（STL 实现参考）](../../../fundamentals/01-data-structures/)
+- [排序与复杂度](../../../fundamentals/01-data-structures/guides/05-sorting-algorithms.md)
 
 ## 模板
 

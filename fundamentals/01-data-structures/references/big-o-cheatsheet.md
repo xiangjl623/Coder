@@ -17,5 +17,5 @@ O(n!) > O(2^n) > O(n²) > O(n log n) > O(n) > O(log n) > O(1)
 
 ## 相关教程
 
-- [复杂度分析](../guides/01-complexity-analysis.md)
-- [排序算法](../guides/02-sorting-algorithms.md)
+- [复杂度分析](../guides/04-complexity-analysis.md)
+- [排序算法](../guides/05-sorting-algorithms.md)

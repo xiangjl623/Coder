@@ -1,6 +1,6 @@
 # 查找与递归
 
-> **难度**：入门 | **阅读时间**：约 18 分钟 | **前置**：[排序算法](02-sorting-algorithms.md) | **标签**：`search` `recursion` `binary-search`
+> **难度**：入门 | **阅读时间**：约 18 分钟 | **前置**：[排序算法](05-sorting-algorithms.md) | **标签**：`search` `recursion` `binary-search`
 
 ## 学习目标
 
@@ -69,4 +69,4 @@ int fib(int n) {
 ## 延伸阅读
 
 - [C 语言函数与递归](../../languages/c/references/05-函数.md)
-- [栈与队列](../04-data-structures/guides/02-stack-and-queue.md) — 递归调用栈
+- [栈与队列](02-stack-and-queue.md) — 递归调用栈

@@ -10,7 +10,7 @@
 
 | 主题 | 目录 | 说明 |
 |------|------|------|
-| 计算机基础 | [fundamentals/](fundamentals/) | 数据结构、算法、操作系统、网络等 |
+| 计算机基础 | [fundamentals/](fundamentals/) | 数据结构、组成原理、操作系统、网络、数据库 |
 | 编程语言 | [languages/](languages/) | 按语言组织的系统教程、速查与示例 |
 | 软件工程 | [engineering/](engineering/) | Git、Linux、测试、CI/CD、架构等 |
 | 职场发展 | [career/](career/) | 职业路径、面试、沟通、成长 |
@@ -29,7 +29,7 @@ flowchart LR
     D --> E
 ```
 
-1. **零基础**：从 [languages/c/](languages/c/) 入门，配合 [fundamentals/04-data-structures/](fundamentals/04-data-structures/) 理解基础概念
+1. **零基础**：从 [languages/c/](languages/c/) 入门，配合 [fundamentals/01-data-structures/](fundamentals/01-data-structures/) 理解基础概念
 2. **C 基础上进阶**：完成 C 核心语法后进入 [languages/cpp/](languages/cpp/)，学习面向对象与 STL
 3. **备考 C 语言期末**： [certifications/university/c-language/](certifications/university/c-language/) → [languages/c/exams/](languages/c/exams/)
 4. **在职提升**： [engineering/01-git-and-collaboration/](engineering/01-git-and-collaboration/) + [engineering/02-linux-and-shell/](engineering/02-linux-and-shell/)
@@ -45,7 +45,8 @@ flowchart LR
 | C++ 速查（14 主题） | 已发布 | [languages/cpp/references/](languages/cpp/references/) |
 | C++ 期末考试题库 | 已发布 | [languages/cpp/exams/](languages/cpp/exams/) |
 | TypeScript 教程 | 骨架/计划中 | [languages/typescript/](languages/typescript/) |
-| 数据结构入门 | 首批发布 | [fundamentals/04-data-structures/](fundamentals/04-data-structures/) |
+| 数据结构 | 已发布 | [fundamentals/01-data-structures/](fundamentals/01-data-structures/) |
+| 组成原理 / OS / 网络 / 数据库 | 已发布 | [fundamentals/](fundamentals/) |
 | Git 与协作 | 首批发布 | [engineering/01-git-and-collaboration/](engineering/01-git-and-collaboration/) |
 | Linux 与 Shell | 首批发布 | [engineering/02-linux-and-shell/](engineering/02-linux-and-shell/) |
 

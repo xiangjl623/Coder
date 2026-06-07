@@ -49,8 +49,8 @@
 
 ## 相关基础
 
-- [数据结构：数组与链表](../../../fundamentals/04-data-structures/)
-- [算法：排序与查找](../../../fundamentals/05-algorithms/)
+- [数据结构：数组与链表](../../../fundamentals/01-data-structures/)
+- [排序与查找](../../../fundamentals/01-data-structures/guides/06-search-and-recursion.md)
 
 ## 模板
 

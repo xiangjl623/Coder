@@ -60,5 +60,5 @@
 
 ## 延伸阅读
 
-- [算法：排序与查找](../../05-algorithms/guides/03-search-and-recursion.md)
+- [查找与递归](guides/06-search-and-recursion.md)
 - [复杂度速查](../references/complexity-cheatsheet.md)

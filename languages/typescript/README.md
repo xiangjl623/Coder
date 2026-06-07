@@ -79,4 +79,4 @@ flowchart LR
 ## 相关章节
 
 - 软件工程（Git/Node 实践）：[engineering/01-git-and-collaboration/](../../engineering/01-git-and-collaboration/)
-- 数据结构基础：[fundamentals/04-data-structures/](../../fundamentals/04-data-structures/)
+- 数据结构基础：[fundamentals/01-data-structures/](../../fundamentals/01-data-structures/)

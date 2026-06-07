@@ -68,7 +68,7 @@ typedef struct Node {
 
 ## 练习
 
-1. 用数组实现冒泡排序（见 [05-algorithms](../05-algorithms/guides/02-sorting-algorithms.md)）
+1. 用数组实现冒泡排序（见 [05 排序算法](guides/05-sorting-algorithms.md)）
 2. 实现单向链表：头插法创建、打印、按值删除
 
 ## 延伸阅读

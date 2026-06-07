@@ -22,4 +22,4 @@
 ## 相关教程
 
 - [数组与链表](../guides/01-arrays-and-linked-lists.md)
-- [算法复杂度](../../05-algorithms/guides/01-complexity-analysis.md)
+- [复杂度分析](guides/04-complexity-analysis.md)

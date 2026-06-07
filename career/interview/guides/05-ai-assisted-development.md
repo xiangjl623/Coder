@@ -142,13 +142,13 @@ LLM + **工具调用**（查 DB、调 API、跑代码）+ 规划循环。
 
 ## 四、小型案例：用 AI 辅助完成链表练习
 
-**场景**：复习 [fundamentals/04-data-structures/](../../../fundamentals/04-data-structures/) 链表章。
+**场景**：复习 [fundamentals/01-data-structures/](../../../fundamentals/01-data-structures/) 链表章。
 
 1. **自己**：画出反转链表指针变化图  
 2. **AI**：根据你的图生成 C 实现草稿  
 3. **你**：手工 trace `[1,2,3]`，发现 off-by-one，修正  
 4. **AI**：生成 3 个边界测试用例  
-5. **你**：运行测试，写入 [exercises/](../../../fundamentals/04-data-structures/exercises/)
+5. **你**：运行测试，写入 [exercises/](../../../fundamentals/01-data-structures/exercises/)
 
 这样既提速，又保留学习深度 — 面试时可完整讲述过程。
 

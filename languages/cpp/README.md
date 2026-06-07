@@ -77,6 +77,5 @@ flowchart LR
 ## 相关章节
 
 - C 语言基础：[languages/c/](../c/)
-- 数据结构基础：[fundamentals/04-data-structures/](../../fundamentals/04-data-structures/)
-- 算法入门：[fundamentals/05-algorithms/](../../fundamentals/05-algorithms/)
+- 数据结构基础：[fundamentals/01-data-structures/](../../fundamentals/01-data-structures/)
 - Linux 与编译实践：[engineering/02-linux-and-shell/](../../engineering/02-linux-and-shell/)

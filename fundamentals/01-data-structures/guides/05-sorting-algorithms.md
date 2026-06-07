@@ -1,6 +1,6 @@
 # 排序算法
 
-> **难度**：入门 | **阅读时间**：约 20 分钟 | **前置**：[复杂度分析](01-complexity-analysis.md) | **标签**：`sort` `bubble-sort`
+> **难度**：入门 | **阅读时间**：约 18 分钟 | **前置**：[复杂度分析](04-complexity-analysis.md) | **标签**：`sort` `bubble-sort`
 
 ## 学习目标
 
@@ -66,4 +66,4 @@ void bubble_sort(int a[], int n) {
 ## 延伸阅读
 
 - [C 语言数组](../../languages/c/references/07-数组.md)
-- [查找与递归](03-search-and-recursion.md)
+- [查找与递归](06-search-and-recursion.md)

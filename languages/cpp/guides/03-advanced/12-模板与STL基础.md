@@ -186,7 +186,7 @@ int main() {
 
 ### 延伸阅读
 
-- [fundamentals/04-data-structures/](../../../fundamentals/04-data-structures/)
+- [fundamentals/01-data-structures/](../../../fundamentals/01-data-structures/)
 - [C++ 速查 §10～12](../../references/C++常用语法汇总.md#10-模板)
 
 ---

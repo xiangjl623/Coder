@@ -1,6 +1,6 @@
 # 复杂度分析
 
-> **难度**：入门 | **阅读时间**：约 15 分钟 | **前置**：[数组与链表](../04-data-structures/guides/01-arrays-and-linked-lists.md) | **标签**：`big-o` `complexity`
+> **难度**：入门 | **阅读时间**：约 15 分钟 | **前置**：[数组与链表](01-arrays-and-linked-lists.md) | **标签**：`big-o` `complexity`
 
 ## 学习目标
 
@@ -50,5 +50,5 @@ for (int i = 0; i < n; i++)
 
 ## 延伸阅读
 
-- [排序算法](02-sorting-algorithms.md)
-- [复杂度速查](../04-data-structures/references/complexity-cheatsheet.md)
+- [排序算法](05-sorting-algorithms.md)
+- [复杂度速查](../references/complexity-cheatsheet.md)

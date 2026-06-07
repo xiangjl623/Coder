@@ -71,5 +71,4 @@ flowchart LR
 
 ## 相关章节
 
-- 数据结构基础：[fundamentals/04-data-structures/](../../fundamentals/04-data-structures/)
-- 算法入门：[fundamentals/05-algorithms/](../../fundamentals/05-algorithms/)
+- 数据结构基础：[fundamentals/01-data-structures/](../../fundamentals/01-data-structures/)

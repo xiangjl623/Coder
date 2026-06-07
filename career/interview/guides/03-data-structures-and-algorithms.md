@@ -8,7 +8,7 @@
 - [ ] 手写快排或归并思路，分析复杂度
 - [ ] 掌握现场编程的沟通与边界检查习惯
 
-系统学习见 [fundamentals/04-data-structures/](../../../fundamentals/04-data-structures/) 与 [fundamentals/05-algorithms/](../../../fundamentals/05-algorithms/)。
+系统学习见 [fundamentals/01-data-structures/](../../../fundamentals/01-data-structures/)。
 
 ---
 
@@ -28,7 +28,7 @@
 
 ## 二、复杂度与排序
 
-复习 [复杂度分析](../../../fundamentals/05-algorithms/guides/01-complexity-analysis.md) 与 [排序算法](../../../fundamentals/05-algorithms/guides/02-sorting-algorithms.md)。
+复习 [复杂度分析](../../../fundamentals/01-data-structures/guides/04-complexity-analysis.md) 与 [排序算法](../../../fundamentals/01-data-structures/guides/05-sorting-algorithms.md)。
 
 | 算法 | 平均时间 | 空间 | 稳定 |
 |------|----------|------|------|
@@ -136,6 +136,5 @@
 
 ## 延伸阅读
 
-- [fundamentals/04-data-structures/](../../../fundamentals/04-data-structures/)
-- [fundamentals/05-algorithms/](../../../fundamentals/05-algorithms/)
+- [fundamentals/01-data-structures/](../../../fundamentals/01-data-structures/)
 - [04 系统设计与工程实践](04-system-design-and-engineering.md)
