@@ -7,7 +7,7 @@
 | 序号 | 章节 | 状态 | 说明 |
 |------|------|------|------|
 | 01 | [career-paths](01-career-paths/) | 计划中 | 开发 / 架构 / 管理 / 独立开发 |
-| 02 | [interview](02-interview/) | 计划中 | 简历、八股、系统设计 |
+| 02 | [interview](interview/) | 已发布 | 5 篇指南 + 4 份速查 |
 | 03 | [communication](03-communication/) | 计划中 | 技术写作、汇报 |
 | 04 | [growth](04-growth/) | 计划中 | 学习法、读源码 |
 | 05 | [leadership](05-leadership/) | 计划中 | Tech Lead、带人 |

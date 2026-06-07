@@ -9,7 +9,8 @@
 | 理解底层、备考期末 | C | [c/](c/) |
 | C 基础上进阶、OOP/STL | C++ | [cpp/](cpp/) |
 | 快速上手、数据分析 | Python | 计划中 |
-| Web 全栈 | JavaScript | 计划中 |
+| Web 全栈 | TypeScript | [typescript/](typescript/) |
+| Web 全栈（JS 基础） | JavaScript | 计划中 |
 | 企业后端 | Java | 计划中 |
 | 云原生 / 基础设施 | Go | 计划中 |
 
@@ -21,6 +22,7 @@
 |------|------|------|------|------|
 | C | [guides](c/guides/) | [references](c/references/) | [examples](c/examples/) | [exams](c/exams/) |
 | C++ | [guides](cpp/guides/) | [references](cpp/references/) | [examples](cpp/examples/) | [exams](cpp/exams/) |
+| TypeScript | [guides](typescript/guides/) | [references](typescript/references/) | [examples](typescript/examples/) | 计划中 |
 
 ## 新增语言
 

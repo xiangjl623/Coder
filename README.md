@@ -44,6 +44,7 @@ flowchart LR
 | C++ 教程（15 篇） | 已发布 | [languages/cpp/](languages/cpp/) |
 | C++ 速查（14 主题） | 已发布 | [languages/cpp/references/](languages/cpp/references/) |
 | C++ 期末考试题库 | 已发布 | [languages/cpp/exams/](languages/cpp/exams/) |
+| TypeScript 教程 | 骨架/计划中 | [languages/typescript/](languages/typescript/) |
 | 数据结构入门 | 首批发布 | [fundamentals/04-data-structures/](fundamentals/04-data-structures/) |
 | Git 与协作 | 首批发布 | [engineering/01-git-and-collaboration/](engineering/01-git-and-collaboration/) |
 | Linux 与 Shell | 首批发布 | [engineering/02-linux-and-shell/](engineering/02-linux-and-shell/) |
