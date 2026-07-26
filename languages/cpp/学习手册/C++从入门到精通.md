@@ -6,7 +6,9 @@
 - **核心价值**：在 C 基础上掌握 OOP、STL、RAII 与常用现代特性
 - **建议先修**：[C 语言模块](../c/)
 
-> **学习建议**：先看当天知识点 → 跟做文中示例 → 独立练习 → 再对照 [题库](../题库/C++题库.md)。
+这份学习计划按天组织：每天包含**知识点讲解**、**知识点实战例题（含解题思路）**、**作业练习**（含挑战题）；每天文末提供**参考答案**，建议先独立完成再对照。
+
+> **学习建议**：先看当天知识点 → 跟做「知识点实战例题」→ 独立完成作业与挑战 → 对照本节「参考答案」→ 需要更多题再做 [题库](../题库/C++题库.md)。
 
 ## 整体学习计划
 
@@ -191,26 +193,150 @@ int main() {
 
 ---
 
-### 五、实战练习
+### 五、知识点实战例题
 
-#### 练习1：编译运行 Hello C++
+**例题1：最小 Hello**
 
-1. 创建 `hello.cpp`，写入上文示例代码
+**题目**：编写程序，输出两行文字：`Hello, C++!` 与 `从 C 到 C++，继续编程之旅！`。
+
+**解题思路**：
+1. 包含 `<iostream>`
+2. 在 `main` 中用 `std::cout` 两次输出，注意换行
+3. 用 `g++ -std=c++17` 编译运行
+
+**完整代码**：
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, C++!" << std::endl;
+    std::cout << "从 C 到 C++，继续编程之旅！" << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- 源文件扩展名用 `.cpp`，编译器用 `g++` 而非 `gcc`
+- 忘记 `return 0;` 在 C++ 中对 `main` 通常仍可过编译，但建议写上
+
+**例题2：编译命令对比**
+
+**题目**：分别写出编译 `hello.c` 与 `hello.cpp` 的命令，并说明为何扩展名与编译器要匹配。
+
+**解题思路**：
+1. C 源用 `gcc`，C++ 源用 `g++`
+2. C++ 建议显式 `-std=c++17`
+3. 用错编译器可能导致链接或语言特性错误
+
+**完整代码**（仅示意两个最小源文件）：
+
+```c
+/* hello.c */
+#include <stdio.h>
+int main(void) {
+    printf("Hello, C!\n");
+    return 0;
+}
+```
+
+```cpp
+/* hello.cpp */
+#include <iostream>
+int main() {
+    std::cout << "Hello, C++!" << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- `gcc hello.cpp` 有时也能编过，但未按 C++ 正确链接标准库时易踩坑；入门请固定 `g++`
+- Windows 下可执行文件多为 `hello.exe`
+
+### 六、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：编译运行 Hello C++
+1. 创建 `hello.cpp`，写入上文或例题1代码
 2. 使用 `g++ -std=c++17 -Wall hello.cpp -o hello` 编译
 3. 运行并确认输出正确
 
-#### 练习2：对比 C 与 C++ 输出
-
+**练习2**：对比 C 与 C++ 输出  
 分别编写 `hello.c` 和 `hello.cpp`，用 `gcc` 和 `g++` 编译，观察两者输出是否一致。
 
-#### 练习3：思考
-
+**练习3**：简答
 - C++ 源文件为什么通常使用 `.cpp` 扩展名？
-- `std::cout` 中的 `<<` 是什么运算符？（提示：流插入运算符，后续会学到）
+- `std::cout` 中的 `<<` 是什么运算符？
+
+**挑战题**：用 `std::cout` 打印一张至少 5 行的「名片」边框（姓名、专业等），边框用 `=` 或 `-`。
+
+### 七、参考答案
+
+**练习1 参考答案**
+
+思路/解析：最小可运行程序；`-Wall` 打开常见警告，便于尽早发现笔误。
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "Hello, C++!" << std::endl;
+    std::cout << "从 C 到 C++，继续编程之旅！" << std::endl;
+    return 0;
+}
+```
+
+**练习2 参考答案**
+
+思路/解析：两边都输出问候语即可；关注工具链差异，而不是输出是否「完全一样」。
+
+```c
+/* hello.c */
+#include <stdio.h>
+int main(void) {
+    printf("Hello\n");
+    return 0;
+}
+```
+
+```cpp
+/* hello.cpp */
+#include <iostream>
+int main() {
+    std::cout << "Hello" << std::endl;
+    return 0;
+}
+```
+
+编译：`gcc hello.c -o hello_c`；`g++ -std=c++17 hello.cpp -o hello_cpp`。
+
+**练习3 参考答案**
+
+思路/解析：
+- `.cpp`（以及 `.cc` / `.cxx`）约定告诉工具链按 C++ 编译；扩展名本身不改变语言，但是生态约定。
+- `<<` 在这里是**流插入运算符**，把右侧操作数插入到左侧输出流。
+
+**挑战题参考答案**
+
+思路/解析：先打上下边框，中间逐行输出字段，尽量对齐。
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "====================" << std::endl;
+    std::cout << "| Name:  Xiaoming  |" << std::endl;
+    std::cout << "| Major: CS        |" << std::endl;
+    std::cout << "| Lang:  C++       |" << std::endl;
+    std::cout << "====================" << std::endl;
+    return 0;
+}
+```
 
 ---
 
-### 六、总结与延伸
+### 八、总结与延伸
 
 #### 本节重点回顾
 
@@ -486,13 +612,85 @@ g++ -std=c++17 -Wall hello.cpp -o hello
 
 ---
 
-### 七、实战练习
+### 七、知识点实战例题
 
-#### 练习1：配置 C++ 编译任务
+**例题1：命令行编译参数**
 
-按本篇配置 VS Code 的 tasks.json，确保 `Ctrl+Shift+B` 能成功编译 `.cpp` 文件。
+**题目**：解释并实际执行：`g++ -std=c++17 -Wall info.cpp -o info`。
 
-#### 练习2：输出个人信息
+**解题思路**：
+1. `-std=c++17` 选择语言标准
+2. `-Wall` 打开常见警告
+3. `-o info` 指定输出可执行文件名
+
+**完整代码**（`info.cpp`）：
+
+```cpp
+#include <iostream>
+
+int main() {
+    std::cout << "C++ toolchain OK" << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- 漏写 `-o` 时，Linux/macOS 默认生成 `a.out`，Windows MinGW 常生成 `a.exe`
+- 源文件名与输出名不要搞反
+
+**例题2：两数之和（iostream）**
+
+**题目**：从键盘读入两个整数，输出它们的和。
+
+**解题思路**：
+1. 定义两个 `int`
+2. `std::cin >> a >> b;`
+3. `std::cout` 输出结果
+
+**完整代码**：
+
+```cpp
+#include <iostream>
+
+int main() {
+    int a, b;
+    std::cout << "请输入两个整数：";
+    std::cin >> a >> b;
+    std::cout << a << " + " << b << " = " << (a + b) << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- `cin` 变量前**不需要**取地址 `&`（与 `scanf` 不同）
+- 输入类型不匹配可能导致后续读入失败
+
+### 八、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：配置 C++ 编译任务  
+按本篇配置 VS Code 的 `tasks.json`，确保 `Ctrl+Shift+B` 能成功编译 `.cpp` 文件（也可用命令行完成同等验证）。
+
+**练习2**：输出个人信息  
+创建 `info.cpp`，用 `std::cout` 输出姓名、学号、专业、语言等信息，带简单分隔线。
+
+**练习3**：两数之和（C++ 版）  
+使用 `std::cin` / `std::cout` 实现两整数求和，并口头对比 `scanf`/`printf`。
+
+**挑战题**：读入三个 `double`，输出平均值（保留两位小数；可用 `<iomanip>` 的 `std::fixed` 与 `std::setprecision`）。
+
+### 九、参考答案
+
+**练习1 参考答案**
+
+思路/解析：确认编译器为 `g++`，参数含 `-std=c++17 -Wall`；命令行等价验证：
+
+```bash
+g++ -std=c++17 -Wall info.cpp -o info
+```
+
+**练习2 参考答案**
 
 ```cpp
 #include <iostream>
@@ -508,13 +706,41 @@ int main() {
 }
 ```
 
-#### 练习3：两数之和（C++ 版）
+**练习3 参考答案**
 
-使用 `std::cin` 和 `std::cout` 实现两整数求和，对比 C 版本的 `scanf`/`printf`。
+思路/解析：`cin` 自动按类型提取，无需格式串与 `&`。
+
+```cpp
+#include <iostream>
+
+int main() {
+    int a, b;
+    std::cin >> a >> b;
+    std::cout << a + b << std::endl;
+    return 0;
+}
+```
+
+**挑战题参考答案**
+
+思路/解析：求和除以 3.0；用 `fixed` + `setprecision(2)` 控制小数位。
+
+```cpp
+#include <iostream>
+#include <iomanip>
+
+int main() {
+    double a, b, c;
+    std::cin >> a >> b >> c;
+    double avg = (a + b + c) / 3.0;
+    std::cout << std::fixed << std::setprecision(2) << avg << std::endl;
+    return 0;
+}
+```
 
 ---
 
-### 八、总结与延伸
+### 十、总结与延伸
 
 #### 本节重点回顾
 
@@ -782,29 +1008,150 @@ C++ 中 `main` 必须返回 `int`（C 中 `void main()` 是非标准的，C++ �
 
 ---
 
-### 六、实战练习
+### 六、知识点实战例题
 
-#### 练习1：多文件编译
+**例题1：命名空间隔离**
 
-1. 创建 `greet.h`、`greet.cpp`、`main.cpp`
-2. `greet.cpp` 实现 `void sayHello(const std::string& name);`
-3. 分别编译再链接，或使用一条 g++ 命令
+**题目**：定义 `namespace A` 与 `namespace B`，各自有 `void print()`，在 `main` 中分别调用。
 
-#### 练习2：命名空间实验
+**解题思路**：
+1. 同名函数放在不同命名空间避免冲突
+2. 调用时写 `A::print()` / `B::print()`
 
-定义 `namespace A` 和 `namespace B`，各自包含同名函数 `print()`，在 main 中用限定名调用。
+**完整代码**：
 
-#### 练习3：观察预处理
+```cpp
+#include <iostream>
 
-```bash
-g++ -E main.cpp | head -50
+namespace A {
+void print() { std::cout << "A\n"; }
+}
+
+namespace B {
+void print() { std::cout << "B\n"; }
+}
+
+int main() {
+    A::print();
+    B::print();
+    return 0;
+}
 ```
 
-观察 `#include <iostream>` 展开后的内容（会很长）。
+**要点/易错**：
+- 只写 `print()` 会找不到声明或产生歧义
+- 头文件中避免 `using namespace std;`
+
+**例题2：多文件最小结构**
+
+**题目**：`greet.h` 声明 `sayHello`，`greet.cpp` 定义，`main.cpp` 调用。
+
+**解题思路**：
+1. 头文件放声明 + `#pragma once`
+2. 源文件包含头文件并实现
+3. 一条命令同时编译多个 `.cpp`
+
+**完整代码**：
+
+```cpp
+// greet.h
+#pragma once
+#include <string>
+void sayHello(const std::string& name);
+```
+
+```cpp
+// greet.cpp
+#include "greet.h"
+#include <iostream>
+void sayHello(const std::string& name) {
+    std::cout << "Hello, " << name << std::endl;
+}
+```
+
+```cpp
+// main.cpp
+#include "greet.h"
+int main() {
+    sayHello("C++");
+    return 0;
+}
+```
+
+**要点/易错**：
+- 链接时两个 `.cpp` 都要参与：`g++ -std=c++17 greet.cpp main.cpp -o app`
+- 头文件一般不放函数定义（inline/模板除外）
+
+### 七、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：多文件编译  
+创建 `greet.h` / `greet.cpp` / `main.cpp`，实现 `void sayHello(const std::string& name);`，用一条 `g++` 命令生成可执行文件。
+
+**练习2**：命名空间实验  
+定义 `namespace A` 和 `namespace B`，各自包含同名 `print()`，在 `main` 中用限定名调用。
+
+**练习3**：观察预处理  
+运行 `g++ -E main.cpp`（可用管道查看前若干行），观察 `#include` 展开。
+
+**挑战题**：用**匿名命名空间**在单个 `.cpp` 中隐藏一个仅内部使用的辅助函数，并说明它与 `static` 函数的相似点。
+
+### 八、参考答案
+
+**练习1 参考答案**
+
+思路/解析：声明与定义分离；链接阶段合并目标文件。
+
+```bash
+g++ -std=c++17 -Wall greet.cpp main.cpp -o app
+```
+
+（源码同例题2。）
+
+**练习2 参考答案**
+
+```cpp
+#include <iostream>
+namespace A { void print() { std::cout << "A\n"; } }
+namespace B { void print() { std::cout << "B\n"; } }
+int main() {
+    A::print();
+    B::print();
+    return 0;
+}
+```
+
+**练习3 参考答案**
+
+思路/解析：`-E` 只预处理；展开后会出现大量标准库内容，说明「包含头文件」本质是文本展开。
+
+```bash
+g++ -E main.cpp | more
+```
+
+**挑战题参考答案**
+
+思路/解析：匿名命名空间内的符号具有内部链接，仅当前翻译单元可见。
+
+```cpp
+#include <iostream>
+
+namespace {
+void helper() { std::cout << "internal\n"; }
+}
+
+int main() {
+    helper();
+    return 0;
+}
+```
+
+与文件内 `static void helper()` 类似：都是避免污染其他 `.cpp` 的符号表。
 
 ---
 
-### 七、总结与延伸
+### 九、总结与延伸
 
 #### 本节重点回顾
 
@@ -1105,15 +1452,85 @@ int main() {
 
 ---
 
-### 七、实战练习
+### 七、知识点实战例题
 
-#### 练习1：引用交换
+**例题1：引用交换**
 
-编写 `void swap(int& a, int& b)`，在 main 中验证交换效果。
+**题目**：实现 `void swap(int& a, int& b)`，在 `main` 中验证。
 
-#### 练习2：auto 推导
+**解题思路**：
+1. 引用参数是实参别名，修改即改原变量
+2. 用临时变量完成三点交换
 
-声明多个 `auto` 变量，用 `typeid` 或编译器推断确认其类型：
+**完整代码**：
+
+```cpp
+#include <iostream>
+
+void swap(int& a, int& b) {
+    int t = a;
+    a = b;
+    b = t;
+}
+
+int main() {
+    int x = 3, y = 5;
+    swap(x, y);
+    std::cout << x << " " << y << std::endl;  // 5 3
+    return 0;
+}
+```
+
+**要点/易错**：
+- 引用必须绑定到已存在对象，不能为 null
+- 形参写成 `int a` 则只改副本，无法交换实参
+
+**例题2：auto 与四则运算**
+
+**题目**：用 `auto` 保存中间结果，读入两个 `double` 并输出它们的和。
+
+**解题思路**：
+1. `cin` 读入
+2. `auto sum = a + b;` 由编译器推导
+3. `cout` 输出
+
+**完整代码**：
+
+```cpp
+#include <iostream>
+
+int main() {
+    double a, b;
+    std::cin >> a >> b;
+    auto sum = a + b;
+    std::cout << sum << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- `auto` 必须有初始值才能推导
+- 整数相除仍是整数除法：`auto x = 1 / 2;` 得到 0
+
+### 八、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：引用交换 — 编写 `void swap(int& a, int& b)` 并验证。
+
+**练习2**：auto 推导 — 声明多个 `auto` 变量，可用 `typeid` 打印类型名（实现定义，重在观察差异）。
+
+**练习3**：iostream 计算器 — 读入两个数与运算符（`+ - * /`），输出结果（除法注意除数为 0）。
+
+**挑战题**：分别用**引用**与**指针**实现交换函数，并简述二者差异。
+
+### 九、参考答案
+
+**练习1 参考答案**
+
+（同例题1代码。）
+
+**练习2 参考答案**
 
 ```cpp
 #include <typeinfo>
@@ -1128,13 +1545,48 @@ int main() {
 }
 ```
 
-#### 练习3：iostream 计算器
+**练习3 参考答案**
 
-用 `cin`/`cout` 实现两数加减乘除，对比 C 版 `scanf`/`printf` 的实现。
+思路/解析：先读两个操作数与一个字符运算符，再用 `if`/`switch` 分支；除法前检查 0。
+
+```cpp
+#include <iostream>
+
+int main() {
+    double a, b;
+    char op;
+    std::cin >> a >> op >> b;
+    if (op == '+') std::cout << a + b;
+    else if (op == '-') std::cout << a - b;
+    else if (op == '*') std::cout << a * b;
+    else if (op == '/') {
+        if (b == 0) std::cout << "div0";
+        else std::cout << a / b;
+    } else std::cout << "bad op";
+    std::cout << std::endl;
+    return 0;
+}
+```
+
+**挑战题参考答案**
+
+思路/解析：引用更简洁；指针可表示「可空」，但调用要取地址。
+
+```cpp
+void swap_ref(int& a, int& b) {
+    int t = a; a = b; b = t;
+}
+
+void swap_ptr(int* a, int* b) {
+    int t = *a; *a = *b; *b = t;
+}
+```
+
+差异：引用必须绑定且不可重新绑定（普通引用）；指针可改变指向、可为 `nullptr`，调用写作 `swap_ptr(&x, &y)`。
 
 ---
 
-### 八、总结与延伸
+### 十、总结与延伸
 
 #### 本节重点回顾
 
@@ -1336,23 +1788,138 @@ C++ 允许为用户定义类型重载运算符（类章节详述）：
 
 ---
 
-### 八、实战练习
+### 八、知识点实战例题
 
-#### 练习1：new/delete 练习
+**例题1：new/delete 单个对象**
 
-动态分配一个 `double` 数组，长度为 n（用户输入），填入 1～n 并输出。
+**题目**：用 `new` 分配一个 `int`，赋值为 42，输出后 `delete`。
 
-#### 练习2：nullptr 与指针
+**解题思路**：
+1. `int* p = new int(42);`
+2. 使用 `*p`
+3. `delete p;` 后可置 `p = nullptr;`
 
-编写函数 `void print(int* p)`，若 p 为 nullptr 输出「空」，否则输出值。
+**完整代码**：
 
-#### 练习3：类型转换
+```cpp
+#include <iostream>
 
-用 `static_cast` 实现整数除法得到浮点结果。
+int main() {
+    int* p = new int(42);
+    std::cout << *p << std::endl;
+    delete p;
+    p = nullptr;
+    return 0;
+}
+```
+
+**要点/易错**：
+- `new` 与 `delete` 成对；数组用 `new[]` / `delete[]`
+- 忘记 `delete` 会造成泄漏
+
+**例题2：nullptr 判断**
+
+**题目**：编写 `void print(int* p)`，空指针输出「空」，否则输出值。
+
+**解题思路**：
+1. 先判断 `p == nullptr`
+2. 再解引用
+
+**完整代码**：
+
+```cpp
+#include <iostream>
+
+void print(int* p) {
+    if (p == nullptr) std::cout << "空" << std::endl;
+    else std::cout << *p << std::endl;
+}
+
+int main() {
+    int x = 10;
+    print(nullptr);
+    print(&x);
+    return 0;
+}
+```
+
+**要点/易错**：
+- 优先用 `nullptr`，不要用 `NULL`/`0` 混用造成重载歧义
+- 解引用前必须确认非空
+
+### 九、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：new/delete 练习 — 动态分配长度为 n 的 `double` 数组，填入 1～n 并输出，最后 `delete[]`。
+
+**练习2**：nullptr 与指针 — 实现例题2的 `print`。
+
+**练习3**：类型转换 — 用 `static_cast<double>` 计算两个 int 的真实除法结果。
+
+**挑战题**：先写一段会泄漏的 `new` 代码，再用 `std::unique_ptr`（或明确写出应 `delete` 的修正版）说明如何避免。
+
+### 十、参考答案
+
+**练习1 参考答案**
+
+思路/解析：数组分配用 `new double[n]`，释放必须 `delete[]`。
+
+```cpp
+#include <iostream>
+
+int main() {
+    int n;
+    std::cin >> n;
+    double* a = new double[n];
+    for (int i = 0; i < n; ++i) a[i] = i + 1;
+    for (int i = 0; i < n; ++i) std::cout << a[i] << " ";
+    std::cout << std::endl;
+    delete[] a;
+    return 0;
+}
+```
+
+**练习2 参考答案**
+
+（同例题2。）
+
+**练习3 参考答案**
+
+思路/解析：先把其中一个操作数转为 `double`，再除。
+
+```cpp
+#include <iostream>
+
+int main() {
+    int a = 5, b = 2;
+    double r = static_cast<double>(a) / b;
+    std::cout << r << std::endl;  // 2.5
+    return 0;
+}
+```
+
+**挑战题参考答案**
+
+思路/解析：裸 `new` 在中途 `return` 时易泄漏；智能指针在析构时自动释放。
+
+```cpp
+#include <memory>
+
+void leaky() {
+    int* p = new int(1);
+    // 若此处提前 return，则泄漏
+    delete p;
+}
+
+void safe() {
+    auto p = std::make_unique<int>(1);
+}  // 自动释放
+```
 
 ---
 
-### 九、总结与延伸
+### 十一、总结与延伸
 
 #### 本节重点回顾
 
@@ -1503,23 +2070,150 @@ if (int x = getValue(); x > 0) {  // C++ 条件内声明（作用域限于 if �
 
 ---
 
-### 五、实战练习
+### 五、知识点实战例题
 
-#### 练习1：成绩等级
+**例题1：成绩等级**
 
-用 if-else 根据分数输出 A/B/C/D/F，使用 `bool` 标记是否及格。
+**题目**：输入分数，输出 A/B/C/D/F，并用 `bool` 表示是否及格（>=60）。
 
-#### 练习2：enum class 菜单
+**解题思路**：
+1. 用 if-else 分段
+2. `bool pass = score >= 60;`
 
-定义 `enum class Menu { Add, Delete, Query, Exit }`，用 switch 处理用户选择。
+**完整代码**：
 
-#### 练习3：三目运算符
+```cpp
+#include <iostream>
 
-用三目运算符求两数最大值，结果存于 `auto` 变量。
+int main() {
+    int score;
+    std::cin >> score;
+    bool pass = score >= 60;
+    char grade;
+    if (score >= 90) grade = 'A';
+    else if (score >= 80) grade = 'B';
+    else if (score >= 70) grade = 'C';
+    else if (score >= 60) grade = 'D';
+    else grade = 'F';
+    std::cout << grade << (pass ? " pass" : " fail") << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- 分支顺序要从高分到低分
+- 分数范围校验可按需添加
+
+**例题2：enum class 菜单**
+
+**题目**：定义 `enum class Menu { Add, Delete, Query, Exit }`，读入整数映射到枚举并 `switch`。
+
+**解题思路**：
+1. 强类型枚举需 `static_cast`
+2. `switch` 覆盖各分支
+
+**完整代码**：
+
+```cpp
+#include <iostream>
+
+enum class Menu { Add = 1, Delete, Query, Exit };
+
+int main() {
+    int x;
+    std::cin >> x;
+    auto m = static_cast<Menu>(x);
+    switch (m) {
+        case Menu::Add: std::cout << "Add\n"; break;
+        case Menu::Delete: std::cout << "Delete\n"; break;
+        case Menu::Query: std::cout << "Query\n"; break;
+        case Menu::Exit: std::cout << "Exit\n"; break;
+        default: std::cout << "Unknown\n"; break;
+    }
+    return 0;
+}
+```
+
+**要点/易错**：
+- `enum class` 不能隐式转 int；比较要用 `Menu::Add`
+- `switch` 漏 `break` 会贯穿
+
+### 六、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：成绩等级 — 用 if-else + `bool` 及格标记。
+
+**练习2**：enum class 菜单 — 定义菜单枚举并用 switch 处理。
+
+**练习3**：三目运算符 — 求两数最大值，结果存 `auto`。
+
+**挑战题**：用 `enum class` + `do-while` + `switch` 写一个简易 ATM 菜单（查询/存款/取款/退出），余额用变量模拟即可。
+
+### 七、参考答案
+
+**练习1 参考答案**
+
+（同例题1，可按评分标准微调分数线。）
+
+**练习2 参考答案**
+
+（同例题2。）
+
+**练习3 参考答案**
+
+```cpp
+#include <iostream>
+
+int main() {
+    int a, b;
+    std::cin >> a >> b;
+    auto m = (a > b) ? a : b;
+    std::cout << m << std::endl;
+    return 0;
+}
+```
+
+**挑战题参考答案**
+
+思路/解析：循环直到选择退出；各分支修改 `balance`。
+
+```cpp
+#include <iostream>
+
+enum class ATM { Query = 1, Deposit, Withdraw, Exit };
+
+int main() {
+    double balance = 1000;
+    int x;
+    do {
+        std::cout << "1查 2存 3取 4退: ";
+        std::cin >> x;
+        auto op = static_cast<ATM>(x);
+        switch (op) {
+            case ATM::Query:
+                std::cout << balance << std::endl;
+                break;
+            case ATM::Deposit: {
+                double v; std::cin >> v; balance += v; break;
+            }
+            case ATM::Withdraw: {
+                double v; std::cin >> v;
+                if (v <= balance) balance -= v;
+                else std::cout << "insufficient\n";
+                break;
+            }
+            case ATM::Exit: break;
+            default: std::cout << "bad\n"; break;
+        }
+    } while (static_cast<ATM>(x) != ATM::Exit);
+    return 0;
+}
+```
 
 ---
 
-### 六、总结与延伸
+### 八、总结与延伸
 
 #### 本节重点回顾
 
@@ -1673,23 +2367,133 @@ do {
 
 ---
 
-### 五、实战练习
+### 五、知识点实战例题
 
-#### 练习1：范围 for 求和
+**例题1：范围 for 求和**
 
-用 `std::vector<int>` 存储 1～100，范围 for 求和。
+**题目**：`vector` 存 1～10，用范围 for 求和。
 
-#### 练习2：修改元素
+**解题思路**：
+1. `push_back` 或构造时填充
+2. `for (int x : v) sum += x;`
 
-用 `for (auto& x : vec)` 将 vector 中所有元素翻倍。
+**完整代码**：
 
-#### 练习3：嵌套循环
+```cpp
+#include <iostream>
+#include <vector>
 
-打印 5 行 5 列乘法表（传统 for 即可）。
+int main() {
+    std::vector<int> v;
+    for (int i = 1; i <= 10; ++i) v.push_back(i);
+    int sum = 0;
+    for (int x : v) sum += x;
+    std::cout << sum << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- 只要只读，可用 `const auto&`
+- 不要在范围 for 中随意增删正在遍历的容器
+
+**例题2：引用修改元素**
+
+**题目**：将 vector 中所有元素翻倍。
+
+**解题思路**：
+1. 使用 `auto&` 才能改原元素
+2. 若写 `auto x` 则改的是副本
+
+**完整代码**：
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> v{1, 2, 3};
+    for (auto& x : v) x *= 2;
+    for (int x : v) std::cout << x << " ";
+    std::cout << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- `auto` 与 `auto&` 差别是本题核心
+
+### 六、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：范围 for 求和 — `vector` 存 1～100 并求和。
+
+**练习2**：修改元素 — `for (auto& x : vec)` 翻倍。
+
+**练习3**：嵌套循环 — 打印 5×5 乘法表（`i * j`，i,j 从 1 到 5）。
+
+**挑战题**：打印 1～9 的完整九九乘法表。
+
+### 七、参考答案
+
+**练习1 参考答案**
+
+思路/解析：先填充再累加；也可用公式 `100*101/2` 验算。
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> v;
+    for (int i = 1; i <= 100; ++i) v.push_back(i);
+    long long sum = 0;
+    for (int x : v) sum += x;
+    std::cout << sum << std::endl;
+    return 0;
+}
+```
+
+**练习2 参考答案**
+
+（同例题2。）
+
+**练习3 参考答案**
+
+```cpp
+#include <iostream>
+
+int main() {
+    for (int i = 1; i <= 5; ++i) {
+        for (int j = 1; j <= 5; ++j)
+            std::cout << i * j << "\t";
+        std::cout << std::endl;
+    }
+    return 0;
+}
+```
+
+**挑战题参考答案**
+
+思路/解析：内层循环到 `i` 即可得到下三角九九表；完整矩形则内层到 9。
+
+```cpp
+#include <iostream>
+
+int main() {
+    for (int i = 1; i <= 9; ++i) {
+        for (int j = 1; j <= i; ++j)
+            std::cout << j << "*" << i << "=" << i * j << "\t";
+        std::cout << std::endl;
+    }
+    return 0;
+}
+```
 
 ---
 
-### 六、总结与延伸
+### 八、总结与延伸
 
 #### 本节重点回顾
 
@@ -1862,29 +2666,142 @@ std::cout << arr.size() << std::endl;  // 5
 
 ---
 
-### 五、实战练习
+### 五、知识点实战例题
 
-#### 练习1：string 操作
+**例题1：string 拼接与查找**
 
-读入一行字符串（用 `getline`），统计单词数或反转字符串。
+**题目**：构造字符串 `Hello`，拼接 ` C++`，查找子串 `C++` 的位置并输出。
+
+**解题思路**：
+1. `s += "..."` 或 `s = s + ...`
+2. `s.find("C++")` 返回下标或 `npos`
+
+**完整代码**：
 
 ```cpp
 #include <iostream>
 #include <string>
-std::getline(std::cin, line);  // 读取含空格的整行
+
+int main() {
+    std::string s = "Hello";
+    s += " C++";
+    auto pos = s.find("C++");
+    if (pos != std::string::npos)
+        std::cout << pos << " " << s << std::endl;
+    return 0;
+}
 ```
 
-#### 练习2：vector 动态添加
+**要点/易错**：
+- `find` 失败返回 `std::string::npos`，不要当成普通下标直接用
 
-循环读入整数直到输入 0，存入 vector 并输出所有元素。
+**例题2：vector 动态添加**
 
-#### 练习3：找最大值
+**题目**：读入若干整数，以 0 结束，输出全部元素。
 
-用 vector 存储 n 个整数，找出最大值及其下标。
+**解题思路**：
+1. 循环 `cin >> x`，`x==0` 结束
+2. `push_back` 后范围 for 输出
+
+**完整代码**：
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> v;
+    int x;
+    while (std::cin >> x && x != 0) v.push_back(x);
+    for (int n : v) std::cout << n << " ";
+    std::cout << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- 0 作为结束哨兵通常不入队
+
+### 六、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：string 操作 — 用 `getline` 读入一行，统计单词数（以空格分隔）或反转字符串（二选一或都做）。
+
+**练习2**：vector 动态添加 — 读到 0 结束并输出。
+
+**练习3**：找最大值 — 读入 n 与 n 个整数，输出最大值及其下标（从 0 开始）。
+
+**挑战题**：统计字符串中元音字母（aeiouAEIOU）个数。
+
+### 七、参考答案
+
+**练习1 参考答案（反转）**
+
+思路/解析：也可用双指针；这里演示 `std::reverse`。
+
+```cpp
+#include <iostream>
+#include <string>
+#include <algorithm>
+
+int main() {
+    std::string line;
+    std::getline(std::cin, line);
+    std::reverse(line.begin(), line.end());
+    std::cout << line << std::endl;
+    return 0;
+}
+```
+
+**练习2 参考答案**
+
+（同例题2。）
+
+**练习3 参考答案**
+
+思路/解析：边读边维护最大值与下标。
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    int n;
+    std::cin >> n;
+    std::vector<int> v(n);
+    for (int i = 0; i < n; ++i) std::cin >> v[i];
+    int best = 0;
+    for (int i = 1; i < n; ++i)
+        if (v[i] > v[best]) best = i;
+    std::cout << v[best] << " at " << best << std::endl;
+    return 0;
+}
+```
+
+**挑战题参考答案**
+
+```cpp
+#include <iostream>
+#include <string>
+
+int main() {
+    std::string s;
+    std::getline(std::cin, s);
+    int cnt = 0;
+    for (char c : s) {
+        if (c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||
+            c=='A'||c=='E'||c=='I'||c=='O'||c=='U')
+            ++cnt;
+    }
+    std::cout << cnt << std::endl;
+    return 0;
+}
+```
 
 ---
 
-### 六、总结与延伸
+### 八、总结与延伸
 
 #### 本节重点回顾
 
@@ -2052,23 +2969,123 @@ int arr[factorial(5)];  // 120 元素数组，编译期确定
 
 ---
 
-### 七、实战练习
+### 七、知识点实战例题
 
-#### 练习1：重载 print
+**例题1：重载 print**
 
-编写 `print(int)`、`print(double)`、`print(const std::string&)` 三个重载。
+**题目**：实现 `print(int)`、`print(double)`、`print(const std::string&)`。
 
-#### 练习2：默认参数
+**解题思路**：
+1. 同名不同参数列表
+2. 调用时由实参类型决议
 
-编写 `void draw(char ch = '*', int count = 5)`，打印 count 个 ch。
+**完整代码**：
 
-#### 练习3：函数模板
+```cpp
+#include <iostream>
+#include <string>
 
-编写模板函数 `swap(T& a, T& b)` 交换两值。
+void print(int x) { std::cout << "int " << x << std::endl; }
+void print(double x) { std::cout << "double " << x << std::endl; }
+void print(const std::string& s) { std::cout << "string " << s << std::endl; }
+
+int main() {
+    print(1);
+    print(1.5);
+    print(std::string("hi"));
+    return 0;
+}
+```
+
+**要点/易错**：
+- 仅返回类型不同不能构成重载
+- 字面量 `"hi"` 是 `const char*`，可能更匹配别的重载；用 `std::string` 或再加重载
+
+**例题2：默认参数**
+
+**题目**：`void draw(char ch = '*', int count = 5)` 打印若干字符。
+
+**解题思路**：
+1. 默认参数写在声明处，从右到左
+2. 调用可省略右侧参数
+
+**完整代码**：
+
+```cpp
+#include <iostream>
+
+void draw(char ch = '*', int count = 5) {
+    for (int i = 0; i < count; ++i) std::cout << ch;
+    std::cout << std::endl;
+}
+
+int main() {
+    draw();
+    draw('#');
+    draw('-', 10);
+    return 0;
+}
+```
+
+**要点/易错**：
+- 不能隔开省略中间参数
+- 声明与定义不要重复写两套默认值
+
+### 八、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：重载 print — 三个重载版本。
+
+**练习2**：默认参数 — 实现 `draw`。
+
+**练习3**：函数模板 — `template<typename T> void swap(T& a, T& b)`。
+
+**挑战题**：写一个函数模板 `T mymax(T a, T b)`，并说明它与针对具体类型的重载 `max` 如何共存、如何被选中。
+
+### 九、参考答案
+
+**练习1 参考答案**
+
+（同例题1。）
+
+**练习2 参考答案**
+
+（同例题2。）
+
+**练习3 参考答案**
+
+```cpp
+template<typename T>
+void swap(T& a, T& b) {
+    T t = a; a = b; b = t;
+}
+```
+
+**挑战题参考答案**
+
+思路/解析：模板可匹配广泛类型；若存在更匹配的非模板重载，优先普通函数。
+
+```cpp
+#include <iostream>
+
+template<typename T>
+T mymax(T a, T b) { return a > b ? a : b; }
+
+int mymax(int a, int b) {  // 非模板重载
+    return a > b ? a : b;
+}
+
+int main() {
+    std::cout << mymax(3, 5) << std::endl;      // 倾向调用 int 重载
+    std::cout << mymax(3.1, 2.0) << std::endl;  // 模板 double
+    return 0;
+}
+```
 
 ---
 
-### 八、总结与延伸
+### 十、总结与延伸
 
 #### 本节重点回顾
 
@@ -2271,23 +3288,124 @@ int Counter::total = 0;  // 类外定义静态成员
 
 ---
 
-### 七、实战练习
+### 七、知识点实战例题
 
-#### 练习1：Circle 类
+**例题1：Circle 类**
 
-定义 `Circle` 类，含半径成员、构造函数、`area()` 和 `circumference()` 方法。
+**题目**：含半径、构造函数、`area()`、`circumference()`。
 
-#### 练习2：封装
+**解题思路**：
+1. 成员变量可 private
+2. 面积 `pi*r*r`，周长 `2*pi*r`
 
-定义 `Temperature` 类，private 存摄氏度，public 提供 `setCelsius`/`getCelsius`/`getFahrenheit`。
+**完整代码**：
 
-#### 练习3：链式调用
+```cpp
+#include <iostream>
+#include <cmath>
 
-实现 `StringBuilder` 类，`append()` 返回 `*this`，支持 `sb.append("a").append("b")`。
+class Circle {
+    double r;
+public:
+    explicit Circle(double radius) : r(radius) {}
+    double area() const { return 3.141592653589793 * r * r; }
+    double circumference() const { return 2 * 3.141592653589793 * r; }
+};
+
+int main() {
+    Circle c(2.0);
+    std::cout << c.area() << " " << c.circumference() << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- 构造函数初始化列表更清晰
+- `const` 成员函数承诺不修改对象
+
+**例题2：封装 Temperature**
+
+**题目**：private 存摄氏度；提供摄氏读写与华氏读取。
+
+**解题思路**：
+1. 华氏 = 摄氏 * 9/5 + 32
+2. setter 可做范围检查（可选）
+
+**完整代码**：
+
+```cpp
+class Temperature {
+    double celsius_;
+public:
+    void setCelsius(double c) { celsius_ = c; }
+    double getCelsius() const { return celsius_; }
+    double getFahrenheit() const { return celsius_ * 9.0 / 5.0 + 32.0; }
+};
+```
+
+**要点/易错**：
+- 不要把内部表示直接暴露为 public 字段
+
+### 八、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：Circle 类 — 半径、构造、`area`/`circumference`。
+
+**练习2**：封装 — `Temperature` 类。
+
+**练习3**：链式调用 — `StringBuilder::append` 返回 `*this`。
+
+**挑战题**：实现 `Counter`，构造归零，`inc()` 返回 `Counter&` 支持 `c.inc().inc()`，并提供 `get()`。
+
+### 九、参考答案
+
+**练习1 参考答案**
+
+（同例题1。）
+
+**练习2 参考答案**
+
+（同例题2，可补 `main` 测试。）
+
+**练习3 参考答案**
+
+```cpp
+#include <iostream>
+#include <string>
+
+class StringBuilder {
+    std::string data_;
+public:
+    StringBuilder& append(const std::string& s) {
+        data_ += s;
+        return *this;
+    }
+    const std::string& str() const { return data_; }
+};
+
+int main() {
+    StringBuilder sb;
+    sb.append("a").append("b");
+    std::cout << sb.str() << std::endl;
+    return 0;
+}
+```
+
+**挑战题参考答案**
+
+```cpp
+class Counter {
+    int n_ = 0;
+public:
+    Counter& inc() { ++n_; return *this; }
+    int get() const { return n_; }
+};
+```
 
 ---
 
-### 八、总结与延伸
+### 十、总结与延伸
 
 #### 本节重点回顾
 
@@ -2486,23 +3604,196 @@ printArea(r);  // 矩形面积
 
 ---
 
-### 六、实战练习
+### 六、知识点实战例题
 
-#### 练习1：继承层次
+**例题1：简单继承**
 
-定义 `Vehicle` 基类，`Car` 和 `Bicycle` 派生类，各自实现 `move()`。
+**题目**：`Animal` 基类，`Dog` 派生并输出不同叫声。
 
-#### 练习2：虚函数多态
+**解题思路**：
+1. `class Dog : public Animal`
+2. 派生类可调用基类接口
 
-定义 `Employee` 基类（虚函数 `salary()`），`Manager` 和 `Developer` 派生类重写。
+**完整代码**：
 
-#### 练习3：抽象类
+```cpp
+#include <iostream>
+#include <string>
 
-定义抽象类 `Animal`，派生 `Cat`、`Dog`，用基类指针数组调用 `speak()`。
+class Animal {
+public:
+    explicit Animal(std::string n) : name(std::move(n)) {}
+    void info() const { std::cout << name << std::endl; }
+protected:
+    std::string name;
+};
+
+class Dog : public Animal {
+public:
+    explicit Dog(std::string n) : Animal(std::move(n)) {}
+    void speak() const { std::cout << name << ": wang\n"; }
+};
+
+int main() {
+    Dog d("Buddy");
+    d.info();
+    d.speak();
+    return 0;
+}
+```
+
+**要点/易错**：
+- 继承方式常用 `public`
+- 基类构造要在派生类初始化列表中调用
+
+**例题2：虚函数多态**
+
+**题目**：基类指针调用派生类重写的 `speak`。
+
+**解题思路**：
+1. 基类声明 `virtual`
+2. 派生类 `override`
+3. 通过基类指针/引用调用
+
+**完整代码**：
+
+```cpp
+#include <iostream>
+
+class Animal {
+public:
+    virtual void speak() const { std::cout << "...\n"; }
+    virtual ~Animal() = default;
+};
+
+class Cat : public Animal {
+public:
+    void speak() const override { std::cout << "meow\n"; }
+};
+
+int main() {
+    Animal* p = new Cat();
+    p->speak();
+    delete p;
+    return 0;
+}
+```
+
+**要点/易错**：
+- 多态删除需要虚析构
+- 没有 `virtual` 则绑定静态类型
+
+### 七、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：继承层次 — `Vehicle` / `Car` / `Bicycle`，各自 `move()`。
+
+**练习2**：虚函数多态 — `Employee::salary()` 虚函数，`Manager`/`Developer` 重写。
+
+**练习3**：抽象类 — `Animal` 纯虚 `speak()`，`Cat`/`Dog` 实现，基类指针数组调用。
+
+**挑战题**：抽象类 `Shape` 纯虚 `area()`，实现 `Circle` 与 `Rectangle`。
+
+### 八、参考答案
+
+**练习1 参考答案**
+
+```cpp
+#include <iostream>
+
+class Vehicle {
+public:
+    virtual void move() const { std::cout << "move\n"; }
+    virtual ~Vehicle() = default;
+};
+
+class Car : public Vehicle {
+public:
+    void move() const override { std::cout << "drive\n"; }
+};
+
+class Bicycle : public Vehicle {
+public:
+    void move() const override { std::cout << "pedal\n"; }
+};
+```
+
+**练习2 参考答案**
+
+```cpp
+class Employee {
+public:
+    virtual double salary() const { return 0; }
+    virtual ~Employee() = default;
+};
+
+class Manager : public Employee {
+public:
+    double salary() const override { return 20000; }
+};
+
+class Developer : public Employee {
+public:
+    double salary() const override { return 15000; }
+};
+```
+
+**练习3 参考答案**
+
+```cpp
+#include <iostream>
+
+class Animal {
+public:
+    virtual void speak() const = 0;
+    virtual ~Animal() = default;
+};
+
+class Cat : public Animal {
+public:
+    void speak() const override { std::cout << "meow\n"; }
+};
+
+class Dog : public Animal {
+public:
+    void speak() const override { std::cout << "wang\n"; }
+};
+
+int main() {
+    Animal* arr[2] = { new Cat(), new Dog() };
+    for (auto* p : arr) { p->speak(); delete p; }
+    return 0;
+}
+```
+
+**挑战题参考答案**
+
+```cpp
+class Shape {
+public:
+    virtual double area() const = 0;
+    virtual ~Shape() = default;
+};
+
+class Circle : public Shape {
+    double r;
+public:
+    explicit Circle(double R) : r(R) {}
+    double area() const override { return 3.14159 * r * r; }
+};
+
+class Rectangle : public Shape {
+    double w, h;
+public:
+    Rectangle(double W, double H) : w(W), h(H) {}
+    double area() const override { return w * h; }
+};
+```
 
 ---
 
-### 七、总结与延伸
+### 九、总结与延伸
 
 #### 本节重点回顾
 
@@ -2694,23 +3985,155 @@ int main() {
 
 ---
 
-### 七、实战练习
+### 七、知识点实战例题
 
-#### 练习1：模板栈
+**例题1：函数模板 swap**
 
-实现类模板 `Stack<T>`，含 `push`、`pop`、`top`、`empty`。
+**题目**：编写 `template<typename T> void myswap(T& a, T& b)`。
 
-#### 练习2：map 词频统计
+**解题思路**：
+1. 模板头 + 普通函数体
+2. 调用时自动推导 `T`
 
-读入一行文本，用 `map<string, int>` 统计每个单词出现次数。
+**完整代码**：
 
-#### 练习3：algorithm 综合
+```cpp
+#include <iostream>
 
-对 vector 排序后，用 `find` 查找指定值，用 `count` 统计某元素个数。
+template<typename T>
+void myswap(T& a, T& b) {
+    T t = a; a = b; b = t;
+}
+
+int main() {
+    int x = 1, y = 2;
+    myswap(x, y);
+    std::cout << x << y << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- 模板通常放在头文件
+- 类型须支持拷贝/赋值
+
+**例题2：map 计数**
+
+**题目**：对若干单词统计出现次数（可写死输入）。
+
+**解题思路**：
+1. `map<string,int>`
+2. `freq[word]++`
+
+**完整代码**：
+
+```cpp
+#include <iostream>
+#include <map>
+#include <string>
+
+int main() {
+    std::map<std::string, int> freq;
+    for (auto w : {"a", "b", "a"}) freq[w]++;
+    for (const auto& [k, v] : freq)
+        std::cout << k << " " << v << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- `operator[]` 在键不存在时会插入 0
+- C++17 结构化绑定 `[k,v]` 需启用 C++17
+
+### 八、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：模板栈 — `Stack<T>` 含 `push`/`pop`/`top`/`empty`（可用 `vector` 实现）。
+
+**练习2**：map 词频 — 读入一行文本统计单词。
+
+**练习3**：algorithm 综合 — `sort` + `find` + `count`。
+
+**挑战题**：对 `vector` 排序后用 `unique` + `erase` 去重。
+
+### 九、参考答案
+
+**练习1 参考答案**
+
+```cpp
+#include <vector>
+#include <stdexcept>
+
+template<typename T>
+class Stack {
+    std::vector<T> data_;
+public:
+    void push(const T& x) { data_.push_back(x); }
+    void pop() {
+        if (data_.empty()) throw std::runtime_error("empty");
+        data_.pop_back();
+    }
+    T& top() { return data_.back(); }
+    bool empty() const { return data_.empty(); }
+};
+```
+
+**练习2 参考答案**
+
+思路/解析：`istringstream` 按空白拆词。
+
+```cpp
+#include <iostream>
+#include <map>
+#include <sstream>
+#include <string>
+
+int main() {
+    std::string line;
+    std::getline(std::cin, line);
+    std::istringstream iss(line);
+    std::map<std::string, int> freq;
+    std::string w;
+    while (iss >> w) freq[w]++;
+    for (const auto& p : freq)
+        std::cout << p.first << " " << p.second << std::endl;
+    return 0;
+}
+```
+
+**练习3 参考答案**
+
+```cpp
+#include <algorithm>
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> v{3, 1, 2, 2};
+    std::sort(v.begin(), v.end());
+    auto it = std::find(v.begin(), v.end(), 2);
+    std::cout << (it != v.end() ? "found" : "no") << std::endl;
+    std::cout << std::count(v.begin(), v.end(), 2) << std::endl;
+    return 0;
+}
+```
+
+**挑战题参考答案**
+
+```cpp
+#include <algorithm>
+#include <vector>
+
+void dedup(std::vector<int>& v) {
+    std::sort(v.begin(), v.end());
+    v.erase(std::unique(v.begin(), v.end()), v.end());
+}
+```
 
 ---
 
-### 八、总结与延伸
+### 十、总结与延伸
 
 #### 本节重点回顾
 
@@ -2851,23 +4274,122 @@ if (auto locked = wp.lock())
 
 ---
 
-### 六、实战练习
+### 六、知识点实战例题
 
-#### 练习1：unique_ptr 管理数组
+**例题1：unique_ptr 管理 int**
 
-`std::unique_ptr<int[]>` 管理动态数组。
+**题目**：用 `make_unique` 创建 `int`，输出值。
 
-#### 练习2：shared_ptr 共享
+**解题思路**：
+1. `#include <memory>`
+2. 离开作用域自动释放
 
-两个 shared_ptr 指向同一对象，观察 use_count 变化。
+**完整代码**：
 
-#### 练习3：RAII 文件类
+```cpp
+#include <iostream>
+#include <memory>
 
-实现 FileRAII 类，构造打开文件，析构关闭文件。
+int main() {
+    auto p = std::make_unique<int>(42);
+    std::cout << *p << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- `unique_ptr` 不可拷贝，可移动
+- 优先 `make_unique` 而非裸 `new`
+
+**例题2：shared_ptr use_count**
+
+**题目**：拷贝 `shared_ptr` 后观察 `use_count()`。
+
+**解题思路**：
+1. `make_shared`
+2. 赋值/拷贝使计数 +1
+
+**完整代码**：
+
+```cpp
+#include <iostream>
+#include <memory>
+
+int main() {
+    auto a = std::make_shared<int>(1);
+    std::cout << a.use_count() << std::endl;  // 1
+    auto b = a;
+    std::cout << a.use_count() << std::endl;  // 2
+    return 0;
+}
+```
+
+**要点/易错**：
+- 循环引用会导致无法释放，需了解 `weak_ptr`（进阶）
+
+### 七、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：unique_ptr 管理数组 — 使用 `unique_ptr<int[]>` 或 `unique_ptr` + 自定义删除器 / C++14 数组形式，分配 n 个 int 并赋值输出。
+
+**练习2**：shared_ptr 共享 — 两个指针共享同一对象，打印 `use_count`。
+
+**练习3**：RAII 文件类 — 构造 `fopen`，析构 `fclose`（或用 `fstream` 演示 RAII 思想）。
+
+**挑战题**：写工厂函数 `std::unique_ptr<int> make_answer()` 返回堆上对象。
+
+### 八、参考答案
+
+**练习1 参考答案**
+
+```cpp
+#include <iostream>
+#include <memory>
+
+int main() {
+    int n = 5;
+    std::unique_ptr<int[]> a(new int[n]);
+    for (int i = 0; i < n; ++i) a[i] = i;
+    for (int i = 0; i < n; ++i) std::cout << a[i] << " ";
+    std::cout << std::endl;
+    return 0;
+}
+```
+
+**练习2 参考答案**
+
+（同例题2。）
+
+**练习3 参考答案**
+
+```cpp
+#include <cstdio>
+
+class FileRAII {
+    FILE* fp_;
+public:
+    FileRAII(const char* path, const char* mode) : fp_(std::fopen(path, mode)) {}
+    ~FileRAII() { if (fp_) std::fclose(fp_); }
+    FILE* get() const { return fp_; }
+    FileRAII(const FileRAII&) = delete;
+    FileRAII& operator=(const FileRAII&) = delete;
+};
+```
+
+**挑战题参考答案**
+
+```cpp
+#include <memory>
+
+std::unique_ptr<int> make_answer() {
+    return std::make_unique<int>(42);
+}
+```
 
 ---
 
-### 七、总结与延伸
+### 九、总结与延伸
 
 #### 本节重点回顾
 
@@ -3110,7 +4632,84 @@ g++ -std=c++17 -Wall main.cpp student_manager.cpp -o student_mgr
 
 ---
 
-### 六、总结与延伸
+### 六、知识点实战例题
+
+**例题1：按学号查找**
+
+**题目**：在已有 `StudentManager::findById` 思路下，写一段调用示例：找到则 `display()`，否则提示未找到。
+
+**解题思路**：
+1. 用指针或可选返回值表达「可能不存在」
+2. 调用前确保已 `loadFromFile` 或已 `addStudent`
+
+**完整代码**（示意）：
+
+```cpp
+Student* p = mgr.findById("2024001");
+if (p) p->display();
+else std::cout << "未找到\n";
+```
+
+**要点/易错**：
+- 返回内部元素指针时，注意对象生命周期（容器重分配后可能失效）
+- 查不到要处理空指针，避免解引用崩溃
+
+### 七、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：按姓名查询 — 为 `StudentManager` 增加 `Student* findByName(const std::string& name);`（精确匹配即可），并在菜单中调用。
+
+**练习2**：学生人数统计 — 提供 `size()`（或等价接口），在菜单中显示当前学生人数。
+
+**挑战题**：学号唯一性 — `addStudent` 时若学号已存在则拒绝添加并提示。
+
+### 八、参考答案
+
+**练习1 参考答案**
+
+思路/解析：线性扫描 `students`，匹配 `name` 后返回地址。
+
+```cpp
+Student* StudentManager::findByName(const std::string& name) {
+    for (auto& s : students)
+        if (s.name == name) return &s;
+    return nullptr;
+}
+```
+
+**练习2 参考答案**
+
+思路/解析：直接返回容器大小。
+
+```cpp
+std::size_t StudentManager::size() const {
+    return students.size();
+}
+```
+
+菜单中可输出：`std::cout << "人数：" << mgr.size() << std::endl;`
+
+**挑战题参考答案**
+
+思路/解析：添加前先 `findById`，已存在则返回 `false`。
+
+```cpp
+bool StudentManager::addStudent(const Student& s) {
+    if (findById(s.id)) {
+        std::cout << "学号已存在\n";
+        return false;
+    }
+    students.push_back(s);
+    return true;
+}
+```
+
+（若你现有 `addStudent` 为 `void`，可改为返回 `bool`，并同步修改 `main` 中的调用。）
+
+---
+
+### 九、总结与延伸
 
 #### 本节重点回顾
 
@@ -3250,7 +4849,89 @@ A：可编写中小型 C++ 程序、理解 OOP 与 STL、阅读开源 C++ 代码
 
 ---
 
-### 六、总结
+### 六、知识点实战例题
+
+**例题1：现代特性小 demo**
+
+**题目**：写一段短程序，同时使用 `auto`、范围 for 与 `std::vector`。
+
+**解题思路**：
+1. 用 `vector` 存数据
+2. `auto` 推导元素或迭代相关类型
+3. 范围 for 遍历输出
+
+**完整代码**：
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> v{1, 2, 3, 4};
+    auto sum = 0;
+    for (const auto& x : v) sum += x;
+    std::cout << sum << std::endl;
+    return 0;
+}
+```
+
+**要点/易错**：
+- 这是对本专栏现代写法的「体检」，不必引入过多新特性
+
+### 七、作业练习
+
+> 先独立完成，做完再到本节文末「参考答案」对照。
+
+**练习1**：下周学习清单 — 写出 5 条可执行的学习计划（例如：每天刷题库一节 / 读 cppreference 某页 / 改写一个小项目）。
+
+**练习2**：对照 cppreference — 查阅 `std::vector::push_back`，写下 3 条笔记（复杂度、是否使迭代器失效、常见用法等）。
+
+**挑战题**：避免 C 风格 — 把下面 C 风格数组求和改写成 `vector` + 范围 for。
+
+```cpp
+int a[5] = {1, 2, 3, 4, 5};
+int s = 0;
+for (int i = 0; i < 5; ++i) s += a[i];
+```
+
+### 八、参考答案
+
+**练习1 参考答案**
+
+思路/解析：计划要具体、可检查。示例如下（请按自身情况改写）：
+
+1. 复习 Guide 10～12，手写 Circle + 虚函数 Shape
+2. 完成题库中「类与对象」主题 10 题
+3. 阅读 cppreference：`unique_ptr` 页面并做笔记
+4. 给学生管理系统加「按姓名查询」
+5. 用 Compiler Explorer 对比 `new` 与 `make_unique` 生成代码
+
+**练习2 参考答案**
+
+思路/解析（示例笔记，查阅后用自己的话重写）：
+
+1. `push_back` 均摊 O(1)，容量不足时触发扩容
+2. 扩容会使指向元素的引用/迭代器/指针失效
+3. 已知最终大小时可先 `reserve` 减少扩容次数
+
+**挑战题参考答案**
+
+```cpp
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> a{1, 2, 3, 4, 5};
+    int s = 0;
+    for (int x : a) s += x;
+    std::cout << s << std::endl;
+    return 0;
+}
+```
+
+---
+
+### 九、总结
 
 1. 本专栏覆盖 C++ 核心，现代特性以 C++11/17 为主
 2. 进阶方向：Effective 系列、并发、Qt/游戏/嵌入式
