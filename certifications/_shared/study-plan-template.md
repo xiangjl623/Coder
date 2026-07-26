@@ -1,6 +1,6 @@
 # 复习计划模板
 
-> 复制为 `study-plan.md`，替换占位内容。参考实例：[languages/c/exams/两周复习计划.md](../../languages/c/exams/两周复习计划.md)
+> 复制为 `study-plan.md`，替换占位内容。参考实例：[languages/c/学习手册/C语言从入门到精通.md](../../languages/c/学习手册/C语言从入门到精通.md) 中的整体学习计划
 
 ---
 

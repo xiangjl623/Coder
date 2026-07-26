@@ -13,10 +13,9 @@
 
 | 类型 | 目录 | 说明 |
 |------|------|------|
-| 系统教程 | `*/guides/` | 完整章节，遵循 [article-template.md](docs/article-template.md) |
+| 系统教程 | `*/学习手册/` 或 `*/guides/` | 完整章节 / 学习计划，遵循 [article-template.md](docs/article-template.md) |
 | 速查参考 | `*/references/` | 表格、清单、对比，篇幅精炼 |
-| 练习题库 | `*/exercises/`、`*/exams/` | 题目与参考答案分文件存放 |
-| 代码示例 | `*/examples/` | 可独立编译运行 |
+| 练习题库 | `*/题库/`、`*/exercises/` | 题目与参考答案（可同文件或分文件） |
 
 ## 新增语言教程
 

@@ -31,5 +31,5 @@
 ## 相关链接
 
 - [C 语言教程首页](../README.md)
-- [期末考试题库](../exams/)
+- [按章题库](../题库/C语言题库.md)
 - [考试专题索引](../../../certifications/university/c-language/README.md)

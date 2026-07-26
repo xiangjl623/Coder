@@ -1,6 +1,6 @@
 # 大学 C++ 程序设计期末考试
 
-> 高校 C++ 课程期末备考专题：大纲、复习计划、考点对照与题库入口
+> 高校 C++ 课程期末备考专题：考点对照与题库入口
 
 **建议先修**：[大学 C 语言期末](../c-language/) · [languages/c/](../../../languages/c/)
 
@@ -8,24 +8,14 @@
 
 | 内容类型 | 位置 | 入口 |
 |----------|------|------|
-| 大纲、复习计划、考点表 | 本目录 | 见下方 |
-| 题目与参考答案 | languages/cpp/exams/ | [languages/cpp/exams/](../../../languages/cpp/exams/) |
-| 系统教程（15 篇） | languages/cpp/学习指导/ | [学习指导](../../../languages/cpp/学习指导/C++从入门到精通.md) |
+| 大纲与考点对照 | 本目录 | 见下方 |
 | 按章题库 | languages/cpp/题库/ | [题库](../../../languages/cpp/题库/C++题库.md) |
+| 系统教程（15 篇） | languages/cpp/学习手册/ | [学习手册](../../../languages/cpp/学习手册/C++从入门到精通.md) |
 | 语法速查（14 主题） | languages/cpp/references/ | [references/](../../../languages/cpp/references/) |
-| 示例代码 | languages/cpp/examples/ | [examples/](../../../languages/cpp/examples/) |
-
-## 备考资料
-
-| 资料 | 说明 | 链接 |
-|------|------|------|
-| 期末考试大纲 | 01～15 篇考点、题型分布 | [期末考试大纲.md](../../../languages/cpp/exams/期末考试大纲.md) |
-| 两周复习计划 | 14 天每日任务 | [两周复习计划.md](../../../languages/cpp/exams/两周复习计划.md) |
-| 题库总览 | 选择/填空/问答/纠错/编程各 50 题 | [exams/README.md](../../../languages/cpp/exams/README.md) |
 
 ## 适用范围
 
-本专题对齐 Dev Handbook [C++ 教程体系](../../../languages/cpp/)（非特定教材版本）。若学校使用《C++ Primer》等教材，可对照本仓库 [学习指导](../../../languages/cpp/学习指导/C++从入门到精通.md) 章节映射复习。
+本专题对齐 Dev Handbook [C++ 教程体系](../../../languages/cpp/)（非特定教材版本）。若学校使用《C++ Primer》等教材，可对照本仓库 [学习手册](../../../languages/cpp/学习手册/C++从入门到精通.md) 章节映射复习。
 
 ## 考点速览
 
@@ -40,10 +30,9 @@
 ## 推荐复习顺序
 
 1. 确认 [C 语言基础](../../../languages/c/) 已掌握（至少指针、函数、结构体）
-2. 阅读 [期末考试大纲.md](../../../languages/cpp/exams/期末考试大纲.md)
-3. 按 [两周复习计划.md](../../../languages/cpp/exams/两周复习计划.md) 执行
-4. 刷 [languages/cpp/exams/](../../../languages/cpp/exams/) 各题型并对照参考答案
-5. 薄弱章节回看 [学习指导](../../../languages/cpp/学习指导/C++从入门到精通.md) 与 [examples/](../../../languages/cpp/examples/)，并刷 [按章题库](../../../languages/cpp/题库/C++题库.md)
+2. 按 [学习手册](../../../languages/cpp/学习手册/C++从入门到精通.md) 过一遍核心章节
+3. 对照上方考点速览，薄弱项回看对应速查
+4. 刷 [按章题库](../../../languages/cpp/题库/C++题库.md) 并对照参考答案
 
 ## 相关基础
 

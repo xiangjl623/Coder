@@ -2,8 +2,8 @@
 
 | 考试 | 专题入口 | 题库 |
 |------|----------|------|
-| C 语言期末 | [c-language/](c-language/) | [languages/c/exams/](../../languages/c/exams/) |
-| C++ 期末 | [cpp-language/](cpp-language/) | [languages/cpp/exams/](../../languages/cpp/exams/) |
+| C 语言期末 | [c-language/](c-language/) | [languages/c/题库/](../../languages/c/题库/) |
+| C++ 期末 | [cpp-language/](cpp-language/) | [languages/cpp/题库/](../../languages/cpp/题库/) |
 | 计算机二级 | 计划中 | — |
 | 软考 | 计划中 | — |
 

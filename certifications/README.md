@@ -15,8 +15,8 @@ certifications/
 
 | 考试 | 入口 | 关联教程 |
 |------|------|----------|
-| 大学 C 语言期末 | [university/c-language/](university/c-language/) | [languages/c/exams/](../languages/c/exams/) |
-| 大学 C++ 期末 | [university/cpp-language/](university/cpp-language/) | [languages/cpp/exams/](../languages/cpp/exams/) |
+| 大学 C 语言期末 | [university/c-language/](university/c-language/) | [languages/c/题库/](../languages/c/题库/) |
+| 大学 C++ 期末 | [university/cpp-language/](university/cpp-language/) | [languages/cpp/题库/](../languages/cpp/题库/) |
 | 计算机二级 | university/computer-level-2/ | 计划中 |
 | 软考 | university/software-design/ | 计划中 |
 
@@ -29,7 +29,7 @@ certifications/
 
 ## 双链约定
 
-- **题目与解析**：放在 `languages/<lang>/exams/`
+- **题目与解析**：放在 `languages/<lang>/题库/`
 - **大纲、复习计划、考点对照**：放在 `certifications/university/<exam>/`
 - 两侧 README 互相链接，方便读者从考试入口或语言入口进入
 

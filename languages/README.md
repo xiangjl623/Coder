@@ -1,6 +1,6 @@
 # 编程语言
 
-按语言组织的系统教程、速查表、示例代码与考试题库。
+按语言组织的系统教程（学习手册）、速查表与按章题库。
 
 ## 语言选型指南
 
@@ -18,25 +18,23 @@
 
 ## 已发布语言
 
-| 语言 | 教程 | 速查 | 示例 | 考试 |
-|------|------|------|------|------|
-| C | [两周学习指导](c/学习指导/C语言两周学习指导.md) | [references](c/references/) | [examples](c/examples/) | [exams](c/exams/) |
-| C++ | [学习指导](cpp/学习指导/C++从入门到精通.md) | [references](cpp/references/) | [examples](cpp/examples/) | [exams](cpp/exams/) |
-| TypeScript | [guides](typescript/guides/) | [references](typescript/references/) | [examples](typescript/examples/) | 计划中 |
+| 语言 | 学习手册 | 速查 | 题库 |
+|------|----------|------|------|
+| C | [C语言从入门到精通](c/学习手册/C语言从入门到精通.md) | [references](c/references/) | [题库](c/题库/) |
+| C++ | [C++从入门到精通](cpp/学习手册/C++从入门到精通.md) | [references](cpp/references/) | [题库](cpp/题库/) |
+| TypeScript | [guides](typescript/guides/) | [references](typescript/references/) | 计划中 |
 
 ## 新增语言
 
 复制 [\_template/](_template/) 目录，重命名为语言 slug 后开始编写。详见 [CONTRIBUTING.md](../CONTRIBUTING.md)。
 
-## 目录结构（每种语言）
+## 目录结构（C / C++）
 
 ```
 languages/<lang>/
 ├── README.md
 ├── syllabus.md
-├── guides/
-├── references/
-├── exercises/
-├── examples/
-└── exams/          # 可选
+├── 学习手册/      # 系统教程与学习计划
+├── references/    # 语法速查
+└── 题库/          # 按章题库
 ```

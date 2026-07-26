@@ -1,6 +1,6 @@
 # 大学 C 语言期末考试
 
-> 高校 C 语言程序设计课程期末备考专题：大纲、复习计划、考点对照与题库入口
+> 高校 C 语言程序设计课程期末备考专题：考点对照与题库入口
 
 ## 双链导航
 
@@ -8,19 +8,10 @@
 
 | 内容类型 | 位置 | 入口 |
 |----------|------|------|
-| 大纲、复习计划、考点表 | 本目录 | 见下方 |
-| 题目与参考答案 | languages/c/exams/ | [languages/c/exams/](../../../languages/c/exams/) |
-| 系统教程（15 篇） | languages/c/学习指导/C语言两周学习指导.md | [两周学习指导](../../../languages/c/学习指导/C语言两周学习指导.md) |
+| 大纲与考点对照 | 本目录 | 见下方 |
+| 按章题库 | languages/c/题库/ | [题库](../../../languages/c/题库/C语言题库.md) |
+| 系统教程（15 篇） | languages/c/学习手册/ | [学习手册](../../../languages/c/学习手册/C语言从入门到精通.md) |
 | 语法速查（14 篇） | languages/c/references/ | [references/](../../../languages/c/references/) |
-| 示例代码 | languages/c/examples/ | [examples/](../../../languages/c/examples/) |
-
-## 备考资料
-
-| 资料 | 说明 | 链接 |
-|------|------|------|
-| 期末考试大纲 | 第 1～13 章考点、题型分布、章节对照 | [期末考试大纲.md](../../../languages/c/exams/期末考试大纲.md) |
-| 两周复习计划 | 14 天每日「学练写查」任务 | [两周复习计划.md](../../../languages/c/exams/两周复习计划.md) |
-| 题库总览 | 选择/填空/问答/纠错/编程题 | [exams/README.md](../../../languages/c/exams/README.md) |
 
 ## 适用教材
 
@@ -42,10 +33,9 @@
 
 ## 推荐复习顺序
 
-1. 阅读 [期末考试大纲.md](../../../languages/c/exams/期末考试大纲.md) 了解全局
-2. 按 [两周复习计划.md](../../../languages/c/exams/两周复习计划.md) 执行每日任务
-3. 薄弱章节回看 [languages/c/学习指导/C语言两周学习指导.md](../../../languages/c/学习指导/C语言两周学习指导.md) 对应教程
-4. 刷 [languages/c/exams/](../../../languages/c/exams/) 各题型并对照参考答案
+1. 按 [学习手册](../../../languages/c/学习手册/C语言从入门到精通.md) 过一遍核心章节
+2. 对照上方考点速览，薄弱项回看对应速查
+3. 刷 [按章题库](../../../languages/c/题库/C语言题库.md) 并对照参考答案
 
 ## 相关基础
 

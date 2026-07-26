@@ -16,7 +16,7 @@
 | 内容类型 | 位置 |
 |----------|------|
 | 大纲、复习计划 | 本目录 |
-| 题目与解析 | `languages/<lang>/exams/` 或 `certifications/.../exercises/` |
+| 题目与解析 | `languages/<lang>/题库/` 或 `certifications/.../exercises/` |
 
 ## 考点对照表
 

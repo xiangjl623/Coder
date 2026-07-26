@@ -83,5 +83,5 @@ top                      # 动态查看资源
 
 - [Shell 脚本入门](02-shell-scripting-intro.md)
 - [命令速查](../references/shell-commands-cheatsheet.md)
-- [C 语言环境搭建](../../languages/c/学习指导/C语言两周学习指导.md#guide-02)
-- [C++ 环境搭建](../../languages/cpp/学习指导/C++从入门到精通.md#guide-02)（g++ 编译：`g++ -std=c++17 -Wall hello.cpp -o hello`）
+- [C 语言环境搭建](../../languages/c/学习手册/C语言从入门到精通.md#guide-02)
+- [C++ 环境搭建](../../languages/cpp/学习手册/C++从入门到精通.md#guide-02)（g++ 编译：`g++ -std=c++17 -Wall hello.cpp -o hello`）

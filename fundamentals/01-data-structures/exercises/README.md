@@ -7,4 +7,4 @@
 | 3 | 合并两个有序链表 | 进阶 | 双指针 |
 | 4 | 二叉树前序遍历（递归） | 进阶 | 见 [树与图](../guides/03-trees-and-graphs-intro.md) |
 
-C 语言实现可参考 [languages/c/examples/](../../languages/c/examples/)。
+C 语言实现可参考 [languages/c/学习手册/](../../languages/c/学习手册/C语言从入门到精通.md) 中的数组与链表相关章节。

@@ -66,7 +66,7 @@ __pycache__/
 
 ## 练习
 
-1. 在本地创建仓库，提交 [languages/c/examples/](../../languages/c/examples/) 中一个 `.c` 文件
+1. 在本地创建仓库，提交 [languages/c/学习手册/](../../languages/c/学习手册/) 中一个文档的改动（练习用）
 2. 创建 GitHub 仓库并 push，查看 commit 历史
 
 ## 延伸阅读

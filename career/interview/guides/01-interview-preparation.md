@@ -40,7 +40,7 @@ Result     — 结果如何量化？（性能、用户数、bug 率、交付周�
 
 > 学生管理系统（C++，个人项目）  
 > 用 vector + 文件持久化实现增删改查；通过封装 `StudentManager` 分离 UI 与业务；单元测试覆盖核心 CRUD，README 含编译与运行说明。  
-> 仓库：[languages/cpp/examples/chapter14/](../../../languages/cpp/examples/chapter14/)
+> 参考：[学习手册 · 综合实战](../../../languages/cpp/学习手册/C++从入门到精通.md#guide-14)
 
 ### 项目筛选
 
