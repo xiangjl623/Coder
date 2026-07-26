@@ -30,6 +30,7 @@ flowchart LR
 | 语法速查 | [references/](references/) | 14 主题分册 |
 | 代码示例 | [examples/](examples/) | 按 chapter01～chapter15 分章 |
 | 练习题 | [exercises/](exercises/) | 日常练习（待补充） |
+| 按章题库 | [题库/C语言题库.md](题库/C语言题库.md) | 14 主题：先题后答 + 知识点总结 |
 | 期末考试 | [exams/](exams/) | 题库、大纲、复习计划 |
 | 考试专题 | [certifications/university/c-language/](../../certifications/university/c-language/) | 考点对照与备考指南 |
 
