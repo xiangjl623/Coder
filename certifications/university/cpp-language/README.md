@@ -10,7 +10,8 @@
 |----------|------|------|
 | 大纲、复习计划、考点表 | 本目录 | 见下方 |
 | 题目与参考答案 | languages/cpp/exams/ | [languages/cpp/exams/](../../../languages/cpp/exams/) |
-| 系统教程（15 篇） | languages/cpp/guides/ | [languages/cpp/](../../../languages/cpp/) |
+| 系统教程（15 篇） | languages/cpp/学习指导/ | [学习指导](../../../languages/cpp/学习指导/C++从入门到精通.md) |
+| 按章题库 | languages/cpp/题库/ | [题库](../../../languages/cpp/题库/C++题库.md) |
 | 语法速查（14 主题） | languages/cpp/references/ | [references/](../../../languages/cpp/references/) |
 | 示例代码 | languages/cpp/examples/ | [examples/](../../../languages/cpp/examples/) |
 
@@ -24,7 +25,7 @@
 
 ## 适用范围
 
-本专题对齐 Dev Handbook [C++ 教程体系](../../../languages/cpp/)（非特定教材版本）。若学校使用《C++ Primer》等教材，可对照本仓库 guides 章节映射复习。
+本专题对齐 Dev Handbook [C++ 教程体系](../../../languages/cpp/)（非特定教材版本）。若学校使用《C++ Primer》等教材，可对照本仓库 [学习指导](../../../languages/cpp/学习指导/C++从入门到精通.md) 章节映射复习。
 
 ## 考点速览
 
@@ -42,7 +43,7 @@
 2. 阅读 [期末考试大纲.md](../../../languages/cpp/exams/期末考试大纲.md)
 3. 按 [两周复习计划.md](../../../languages/cpp/exams/两周复习计划.md) 执行
 4. 刷 [languages/cpp/exams/](../../../languages/cpp/exams/) 各题型并对照参考答案
-5. 薄弱章节回看 [guides/](../../../languages/cpp/guides/) 与 [examples/](../../../languages/cpp/examples/)
+5. 薄弱章节回看 [学习指导](../../../languages/cpp/学习指导/C++从入门到精通.md) 与 [examples/](../../../languages/cpp/examples/)，并刷 [按章题库](../../../languages/cpp/题库/C++题库.md)
 
 ## 相关基础
 

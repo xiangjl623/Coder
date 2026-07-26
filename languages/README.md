@@ -21,7 +21,7 @@
 | 语言 | 教程 | 速查 | 示例 | 考试 |
 |------|------|------|------|------|
 | C | [两周学习指导](c/学习指导/C语言两周学习指导.md) | [references](c/references/) | [examples](c/examples/) | [exams](c/exams/) |
-| C++ | [guides](cpp/guides/) | [references](cpp/references/) | [examples](cpp/examples/) | [exams](cpp/exams/) |
+| C++ | [学习指导](cpp/学习指导/C++从入门到精通.md) | [references](cpp/references/) | [examples](cpp/examples/) | [exams](cpp/exams/) |
 | TypeScript | [guides](typescript/guides/) | [references](typescript/references/) | [examples](typescript/examples/) | 计划中 |
 
 ## 新增语言
