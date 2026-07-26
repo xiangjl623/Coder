@@ -3,7 +3,7 @@
 
 ## 在 C 环境之上配置 C++
 
-如果你已按 [C 语言开发环境搭建](../../c/guides/01-getting-started/02-C语言开发环境搭建：从安装到Hello World.md) 配置过 MinGW-w64 或 GCC，那么 **g++ 通常已经可用**——C 与 C++ 共用同一套工具链。本篇重点补充 C++ 特有的配置：g++ 编译选项、VS Code C++ 任务、以及 CMake 简介。
+如果你已按 [C 语言开发环境搭建](../../c/学习指导/C语言两周学习指导.md#guide-02) 配置过 MinGW-w64 或 GCC，那么 **g++ 通常已经可用**——C 与 C++ 共用同一套工具链。本篇重点补充 C++ 特有的配置：g++ 编译选项、VS Code C++ 任务、以及 CMake 简介。
 
 ---
 
@@ -31,7 +31,7 @@ g++ --version
 g++ (MinGW.org GCC-8.2.0-5) 8.2.0
 ```
 
-若未安装，请参考 [C 语言开发环境搭建](../../c/guides/01-getting-started/02-C语言开发环境搭建：从安装到Hello World.md) 安装 MinGW-w64（Windows）或 `sudo apt install g++`（Linux）。
+若未安装，请参考 [C 语言开发环境搭建](../../c/学习指导/C语言两周学习指导.md#guide-02) 安装 MinGW-w64（Windows）或 `sudo apt install g++`（Linux）。
 
 ---
 
@@ -272,7 +272,7 @@ int main() {
 
 ### 延伸阅读
 
-- [C 语言开发环境搭建](../../c/guides/01-getting-started/02-C语言开发环境搭建：从安装到Hello World.md)
+- [C 语言开发环境搭建](../../c/学习指导/C语言两周学习指导.md#guide-02)
 - [engineering/02-linux-and-shell/](../../../engineering/02-linux-and-shell/) — Linux 下的 GCC/g++ 实践
 
 ---

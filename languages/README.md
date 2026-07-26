@@ -20,7 +20,7 @@
 
 | 语言 | 教程 | 速查 | 示例 | 考试 |
 |------|------|------|------|------|
-| C | [guides](c/guides/) | [references](c/references/) | [examples](c/examples/) | [exams](c/exams/) |
+| C | [两周学习指导](c/学习指导/C语言两周学习指导.md) | [references](c/references/) | [examples](c/examples/) | [exams](c/exams/) |
 | C++ | [guides](cpp/guides/) | [references](cpp/references/) | [examples](cpp/examples/) | [exams](cpp/exams/) |
 | TypeScript | [guides](typescript/guides/) | [references](typescript/references/) | [examples](typescript/examples/) | 计划中 |
 

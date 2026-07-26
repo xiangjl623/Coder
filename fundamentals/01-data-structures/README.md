@@ -4,8 +4,8 @@
 
 ## 前置知识
 
-- [languages/c/guides/02-core-syntax/](../../languages/c/guides/02-core-syntax/) 数组与函数
-- [languages/c/guides/03-advanced/](../../languages/c/guides/03-advanced/) 指针与结构体
+- [C 语言：数组与函数](../../languages/c/学习指导/C语言两周学习指导.md#guide-05)
+- [C 语言：指针与结构体](../../languages/c/学习指导/C语言两周学习指导.md#guide-10)
 
 ## 学习顺序
 

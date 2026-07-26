@@ -5,7 +5,7 @@
 
 C 语言中动态内存需手动 `malloc`/`free`，容易泄漏或重复释放。C++ 的 **RAII**（Resource Acquisition Is Initialization）原则：资源在对象构造时获取，析构时自动释放。**智能指针**是 RAII 的典型应用。
 
-> C 内存管理详见 [C 语言内存管理](../../c/guides/03-advanced/11-内存管理：堆与栈的奥秘.md)。
+> C 内存管理详见 [C 语言内存管理](../../c/学习指导/C语言两周学习指导.md#guide-11)。
 
 ---
 
@@ -135,7 +135,7 @@ if (auto locked = wp.lock())
 
 ### 延伸阅读
 
-- [C 语言内存管理](../../c/guides/03-advanced/11-内存管理：堆与栈的奥秘.md)
+- [C 语言内存管理](../../c/学习指导/C语言两周学习指导.md#guide-11)
 - [C++ 速查 §14 智能指针](../../references/C++常用语法汇总.md#14-智能指针与常用头文件)
 
 ---
